@@ -25,7 +25,7 @@ const Navbar = () => {
   const navLinks = <>
     <li className="link link-hover"><NavLink to="/">Home</NavLink></li>
     <li className="link link-hover"><NavLink to="/addProduct">Add Product</NavLink></li>
-    <li className="link link-hover"><NavLink to="/cart">Cart</NavLink></li>
+    <li className="link link-hover"><NavLink to="/cart">My Cart</NavLink></li>
   </>
 
 

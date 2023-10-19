@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import StarRatings from 'react-star-ratings';
+import { AiFillDelete } from "react-icons/ai"
 
-const CartItem = ({ product }) => {
-  const { _id, name, image, price, rating, type, brand } = product;
-
+const CartItem = ({ product, handleRemove, cartId }) => {
+  const { name, image, price, rating, type, brand } = product;
 
   return (
-    <div className='p-5 shadow-md rounded-md flex flex-col lg:flex-row gap-5'>
+    <div className='p-5 shadow-md rounded-md flex flex-col lg:flex-row lg:items-center gap-5'>
       <figure>
         <img className='w-full h-52 rounded-t-md' src={image} alt="" />
       </figure>
@@ -25,6 +25,7 @@ const CartItem = ({ product }) => {
             starRatedColor="#fc7914"
           />
         </div>
+        <button onClick={() => handleRemove(cartId)} className='btn btn-error rounded mt-5'><AiFillDelete /> Remove Product</button>
       </div>
     </div>
   )
@@ -33,5 +34,7 @@ const CartItem = ({ product }) => {
 export default CartItem
 
 CartItem.propTypes = {
-  product: PropTypes.object
+  product: PropTypes.object,
+  handleRemove: PropTypes.func,
+  cartId: PropTypes.string
 }
