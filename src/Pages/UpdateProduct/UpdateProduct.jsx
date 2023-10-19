@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 const UpdateProduct = () => {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/brands")
+    fetch("https://xtechno-server.vercel.app/brands")
       .then(res => res.json())
       .then(data => setBrands(data))
   }, []);
@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     const product = { name, brand, type, rating: parseFloat(rating), image, price };
     // console.log(product)
     
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`https://xtechno-server.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json"

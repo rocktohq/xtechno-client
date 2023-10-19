@@ -20,17 +20,17 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/brands")
+        loader: () => fetch("https://xtechno-server.vercel.app/brands")
       },
       {
         path: "/brands/:brand",
         element: <Brands></Brands>,
-        loader: ({ params }) => fetch(`http://localhost:5000/brands/${params.brand}`)
+        loader: ({ params }) => fetch(`https://xtechno-server.vercel.app/brands/${params.brand}`)
       },
       {
         path: "/products/:id",
         element: <PrivateRoute><Product></Product></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://xtechno-server.vercel.app/products/${params.id}`)
       },
       {
         path: "/addProduct",
@@ -39,12 +39,12 @@ const router = createBrowserRouter([
       {
         path: "/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://xtechno-server.vercel.app/products/${params.id}`)
       },
       {
         path: "/cart",
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        // loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        // loader: ({ params }) => fetch(`https://xtechno-server.vercel.app/products/${params.id}`)
       },
       {
         path: "/login",

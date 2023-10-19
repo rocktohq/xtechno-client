@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import {BsFire} from "react-icons/bs";
+import { BsFire } from "react-icons/bs";
 
 const TopSoldProduct = () => {
 
   const [topProduct, setTopProduct] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/products/652f79821a34485ec679a106")
+    fetch("https://xtechno-server.vercel.app/products/652f79821a34485ec679a106")
       .then(res => res.json())
       .then(data => setTopProduct(data))
   }, []);

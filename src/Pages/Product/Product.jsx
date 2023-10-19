@@ -17,7 +17,7 @@ const Product = () => {
       product
     };
     console.log(cart);
-    fetch("http://localhost:5000/cart", {
+    fetch("https://xtechno-server.vercel.app/cart", {
       method: "POST",
       headers: {
         "content-type": "application/json"

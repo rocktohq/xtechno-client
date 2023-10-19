@@ -6,7 +6,7 @@ import { FaPlus } from "react-icons/fa";
 const AddProduct = () => {
   const [brands, setBrands] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/brands")
+    fetch("https://xtechno-server.vercel.app/brands")
       .then(res => res.json())
       .then(data => setBrands(data))
   }, []);
@@ -27,7 +27,7 @@ const AddProduct = () => {
     const product = { name, brand, type, rating: parseFloat(rating), short_description, image, price };
     // console.log(product)
 
-    fetch("http://localhost:5000/products", {
+    fetch("https://xtechno-server.vercel.app/products", {
       method: "POST",
       headers: {
         "content-type": "application/json"

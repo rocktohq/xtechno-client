@@ -8,14 +8,14 @@ const Cart = () => {
   const { user } = useContext(AuthContext);
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/cart/${user.email}`)
+    fetch(`https://xtechno-server.vercel.app/cart/${user.email}`)
       .then(res => res.json())
       .then(data => setCartItems(data))
   }, []);
 
   // console.log(cartItems)
   const handleRemove = (_id) => {
-    fetch(`http://localhost:5000/cart/${_id}`, {
+    fetch(`https://xtechno-server.vercel.app/cart/${_id}`, {
       method: "DELETE"
     })
       .then(res => res.json())
