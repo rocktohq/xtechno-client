@@ -3,10 +3,11 @@ import { AiOutlineLogin, AiOutlineLogout } from 'react-icons/ai';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Navbar = () => {
 
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, toggleTheme } = useContext(AuthContext);
   const location = useLocation();
 
   // Logout Button
@@ -69,6 +70,13 @@ const Navbar = () => {
           ? <button onClick={handleLogOut} className="btn btn-neutral rounded hidden lg:flex"><AiOutlineLogout />Logout</button>
           : <Link state={location.pathname} to="/login"><button className="btn btn-neutral rounded"><AiOutlineLogin />Login</button></Link>
         }
+        <div className="btn btn-sm btn-circle ml-2">
+          <label className="swap swap-rotate">
+            <input onClick={toggleTheme} type="checkbox" />
+            <div className="swap-on"><MdDarkMode className="text-2xl" /></div>
+            <div className="swap-off"><MdOutlineLightMode className="text-2xl" /></div>
+          </label>
+        </div>
       </div>
     </nav>
   )

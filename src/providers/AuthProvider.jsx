@@ -10,6 +10,8 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState('light');
+
 
   // Google Login
   const googleLogin = () => {
@@ -56,6 +58,14 @@ const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  // Theme
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+  useEffect(() => {
+    document.querySelector('html').setAttribute('data-theme', theme);
+  }, [theme]);
+
   const authValue = {
     user,
     loading,
@@ -64,6 +74,7 @@ const AuthProvider = ({ children }) => {
     loginUser,
     profileUpdate,
     logOut,
+    toggleTheme
   };
 
   return (
