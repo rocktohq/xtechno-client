@@ -19,7 +19,7 @@ const TopSoldProduct = () => {
       {
         topProduct && <div className="flex flex-col lg:flex-row justify-around items-center gap-10">
           <div className="flex-1">
-            <h2 className="text-4xl font-bold flex items-center"><BsFire className="text-error" /> <span>Top Selling Product</span></h2>
+            <h2 className="text-2xl lg:text-4xl font-bold flex items-center"><BsFire className="text-error" /> <span>Top Selling Product</span></h2>
             <p className="mt-5">
               <span className="font-bold">{topProduct.name}</span> got over 1M+ orders and listed as top selling product. {topProduct.short_description}.. Interested? View the product details for more infomation.
             </p>

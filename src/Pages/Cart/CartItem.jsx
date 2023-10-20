@@ -8,7 +8,7 @@ const CartItem = ({ product, handleRemove, cartId }) => {
   return (
     <div className='p-5 shadow-md rounded-md flex flex-col lg:flex-row lg:items-center gap-5'>
       <figure>
-        <img className='w-full h-52 rounded-t-md' src={image} alt="" />
+        <img className='lg:w-full lg:h-52 rounded-t-md' src={image} alt="" />
       </figure>
       <div>
         <h2 className='text-xl font-bold'>{name}</h2>

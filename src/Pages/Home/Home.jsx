@@ -20,7 +20,7 @@ const Home = () => {
         <TopSoldProduct></TopSoldProduct>
       </section>
       <section className="max-w-screen-2xl px-3 my-16">
-        <h2 className="text-center font-bold text-5xl divider mb-10">Browse Brands</h2>
+        <h2 className="text-center font-bold text-3xl lg:text-5xl divider mb-10">Browse Brands</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {
             brands?.map(brand => <BrandCard key={brand._id} brand={brand}></BrandCard>)

@@ -35,7 +35,7 @@ const Product = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row gap-10">
-          <img src={image} className="max-w-md rounded-lg shadow-2xl" />
+          <img src={image} className="lg:max-w-md rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">{name}</h1>
             <p className="py-6">{short_description}</p>
