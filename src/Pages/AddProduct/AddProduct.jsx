@@ -24,6 +24,8 @@ const AddProduct = () => {
     const image = form.image.value;
     const price = form.price.value;
 
+    console.log(brand)
+
     // Validations
     if (name === "" && brand === "" && type === "" && rating === "" && short_description === "" && image === "" && price === "") return toast.error("All fields are required");
     else if (name === "") return toast.error("Product name is required");
@@ -73,7 +75,7 @@ const AddProduct = () => {
                 <span className="label-text">Brand Name</span>
               </label>
               <select name="brand" className="select select-bordered focus:outline-none w-full">
-                <option disabled selected>Brand</option>
+                <option disabled selected value="">Select Brand</option>
                 {brands.length > 0 &&
                   brands.map(brand => <option key={brand._id} value={brand.name}>{brand.name}</option>)
                 }

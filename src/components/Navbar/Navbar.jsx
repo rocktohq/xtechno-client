@@ -34,14 +34,14 @@ const Navbar = () => {
     <nav className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden pl-0">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
-          <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2 w-52">
+          <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box space-y-2 w-52 text-lg">
             {navLinks}
           </ul>
         </div>
-        <Link to="/" className="text-3xl font-extrabold"><span className="text-secondary">x</span>Techno</Link>
+        <Link to="/" className="text-xl md:text-2xl lg:text-3xl font-extrabold"><span className="text-secondary">x</span>Techno</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="text-lg flex items-center space-x-2">
@@ -57,7 +57,7 @@ const Navbar = () => {
                 <img src={user.photoURL} alt="" />
               </div>
             </label>
-            <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-md w-52 text-xl">
+            <ul tabIndex={0} className="menu menu-lg dropdown-content mt-3 z-[99] p-2 shadow bg-base-100 rounded-md w-52 text-xl">
               <li>{user?.displayName}</li>
               <li>
                 <hr />
@@ -68,7 +68,7 @@ const Navbar = () => {
         </>}
         {user
           ? <button onClick={handleLogOut} className="btn btn-neutral rounded hidden lg:flex"><AiOutlineLogout />Logout</button>
-          : <Link state={location.pathname} to="/login"><button className="btn btn-neutral rounded"><AiOutlineLogin />Login</button></Link>
+          : <Link state={location.pathname} to="/login"><button className="btn btn-neutral rounded btn-sm md:btn-md"><AiOutlineLogin />Login</button></Link>
         }
         <div className="btn btn-sm btn-circle ml-2">
           <label className="swap swap-rotate">

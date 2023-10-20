@@ -35,23 +35,21 @@ const UpdateProduct = () => {
     else if (image === "") return toast.error("Product image is required");
     else if (price === "") return toast.error("Product price is required");
 
-    const product = { name, brand, type, rating: parseFloat(rating), image, price };
-    // console.log(product)
+    const updateProduct = { name, brand, type, rating: parseFloat(rating), image, price };
+    // console.log(updateProduct)
 
     fetch(`https://xtechno-server.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json"
       },
-      body: JSON.stringify(product)
+      body: JSON.stringify(updateProduct)
     })
       .then(res => res.json())
       .then(data => {
         if (data.modifiedCount) toast.success("Product updated");
         else toast.error("Soething went wrong");
       })
-    form.reset();
-    // form.reset();
   }
 
   return (
@@ -74,7 +72,7 @@ const UpdateProduct = () => {
                 <span className="label-text">Brand Name</span>
               </label>
               <select name="brand" className="select select-bordered focus:outline-none w-full">
-                <option disabled selected>Brand</option>
+                <option disabled selected value="">Select Brand</option>
                 {brands.length > 0 &&
                   brands.map(brand => <option key={brand._id} value={brand.name}>{brand.name}</option>)
                 }
