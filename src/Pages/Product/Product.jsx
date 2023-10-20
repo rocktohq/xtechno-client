@@ -16,7 +16,7 @@ const Product = () => {
       user_email: user.email,
       product
     };
-    console.log(cart);
+    // console.log(cart);
     fetch("https://xtechno-server.vercel.app/cart", {
       method: "POST",
       headers: {
