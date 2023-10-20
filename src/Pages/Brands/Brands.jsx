@@ -15,7 +15,7 @@ const Brands = () => {
         }
       </div>
       <div className="py-10 bg-base-200">
-        <h2 className="text-center font-bold text-4xl divider mb-10">All {brandName.brand} Products</h2>
+        <h2 className="text-center font-bold text-2xl lg:text-4xl divider mb-10">{brandName.brand} Products</h2>
         {
           products.length > 0
             ? <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-3">
