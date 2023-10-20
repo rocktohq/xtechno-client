@@ -24,7 +24,7 @@ const Brands = () => {
               }
             </div>
             : <div className="my-10">
-              <h3 className="text-center text-3xl font-bold">No Products Found!</h3>
+              <h3 className="text-center text-3xl font-bold">No Product Found!</h3>
             </div>
         }
 
