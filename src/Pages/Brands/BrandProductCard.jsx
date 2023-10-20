@@ -10,8 +10,8 @@ const BrandProductCard = ({ product }) => {
   return (
     <div className="rounded-md shadow-md bg-base-100">
       <figure className='relative'>
-        <img className='w-full h-52 rounded-t-md' src={image} alt={name} />
-        <p className='bg-gray-900 text-white font-medium text-lg text-center px-3 py-1 absolute top-0 left-0 rounded-tl-md'>{brand}</p>
+        <img className='lg:w-full lg:h-52 rounded-t-md' src={image} alt={name} />
+        <p className='bg-secondary font-medium text-lg text-center px-3 py-1 absolute top-0 left-0 rounded-tl-md'>{brand}</p>
       </figure>
       <div className='p-5 space-y-2'>
         <h2 className='text-xl font-bold'>{name}</h2>
