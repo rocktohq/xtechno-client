@@ -12,7 +12,7 @@ const TopSoldProduct = () => {
       .then(data => setTopProduct(data))
   }, []);
 
-  console.log(topProduct)
+  // console.log(topProduct)
 
   return (
     <>
