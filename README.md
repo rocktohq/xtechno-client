@@ -2,7 +2,7 @@
 
 xTechno is an e-Commerce application that is categorized as Technology where user can browse and select product to buy.
 
-## Features of xTechno
+## Features:
 
 _xTechno is simple yet very powerfull project for now a days world. Some feature of this project:_
 
@@ -14,6 +14,6 @@ _xTechno is simple yet very powerfull project for now a days world. Some feature
 - **Update Product:** Existing product can be updated from Update Product section. Only logged in user have to permission to do so.
 - **Login/Registration System:** New user can be registered from this system. There is two way to login to this system. The first one is by registering email and password previously, and the second one is with Google account.
 
-## Live Demo
+## Live Demo:
 
 **Firebase Link:** https://xtechnohq.web.app
