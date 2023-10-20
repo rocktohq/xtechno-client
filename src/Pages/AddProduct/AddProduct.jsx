@@ -24,6 +24,16 @@ const AddProduct = () => {
     const image = form.image.value;
     const price = form.price.value;
 
+    // Validations
+    if (name === "" && brand === "" && type === "" && rating === "" && short_description === "" && image === "" && price === "") return toast.error("All fields are required");
+    else if (name === "") return toast.error("Product name is required");
+    else if (brand === "") return toast.error("Product brand is required");
+    else if (type === "") return toast.error("Product type is required");
+    else if (rating === "") return toast.error("Product rating is required");
+    else if (short_description === "") return toast.error("Product description is required");
+    else if (image === "") return toast.error("Product image is required");
+    else if (price === "") return toast.error("Product price is required");
+
     const product = { name, brand, type, rating: parseFloat(rating), short_description, image, price };
     // console.log(product)
 
@@ -39,7 +49,7 @@ const AddProduct = () => {
         if (data.insertedId) toast.success("Product added");
         else toast.error("Soething went wrong");
       })
-      
+
     form.reset();
   }
 
