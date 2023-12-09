@@ -1,11 +1,10 @@
 ## xTechno
 
 xTechno is a mini e-Commerce application that is categorized as Technology where user can browse and select product to buy.
-
-## Live Demo:
-
-**Firebase Demo:** https://xtechnohq.web.app
-
+<br/>
+<br/>
+View: <a href="https://xtechnohq.web.app">**Live Demo**</a>
+<br/>
 ## Technologies Used
 
 - ReactJS  
